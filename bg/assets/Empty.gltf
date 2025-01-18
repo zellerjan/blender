@@ -1,0 +1,44 @@
+{
+	"asset":{
+		"generator":"Khronos glTF Blender I/O v3.5.30",
+		"version":"2.0"
+	},
+	"scene":0,
+	"scenes":[
+		{
+			"extras":{
+				"s_output":"exporting...",
+				"b_export":1,
+				"b_interactive":0,
+				"b_settings":1,
+				"b_renderer":0,
+				"b_player":0,
+				"export_path":"/Users/fazlifazliu/Downloads/",
+				"s_project_name":"Pastaland V6",
+				"b_cast_shadows":0,
+				"b_cubemap_background":1,
+				"b_show_env_sky":1
+			},
+			"name":"Scene",
+			"nodes":[
+				0
+			]
+		}
+	],
+	"nodes":[
+		{
+			"name":"Empty",
+			"rotation":[
+				0.11320313811302185,
+				0,
+				0,
+				0.993571937084198
+			],
+			"scale":[
+				1.9834556579589844,
+				1.9834562540054321,
+				1.9834562540054321
+			]
+		}
+	]
+}
