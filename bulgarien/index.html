@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+    <!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+    <!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
+    <head>
+        <title>WebXR Application</title>
+        <link rel="icon" type="image/png" href="favicon.ico"/>
+        <meta name="description" content="3D Application">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+        <script type="text/javascript" src="js/webxr.js"></script>
+        <script type="text/javascript" src="js/joystick.js"></script>
+        <script type="text/javascript" src="js/camera-cube-env.js"></script>
+        
+
+		<!-- ADDED A FRAME LIBRARY -->
+		<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.4/dist/aframe-extras.min.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="init();">
+        <a-scene   shadow="type: pcfsoft; autoUpdate: true;" renderer="antialias: false; colorManagement: false; physicallyCorrectLights: false;">
+            
+			<!-- CONTROLS -->
+<a-entity id="rig" movement-controls="controls: gamepad,keyboard,nipple" nipple-controls="mode: static">
+	<!-- camera -->
+	<a-entity camera position="0 1.6 5" look-controls="pointerLockEnabled: true">
+	</a-entity>
+
+	<!-- hands -->
+	<a-entity hand-controls="hand: left"></a-entity>
+	<a-entity hand-controls="hand: right"></a-entity>
+</a-entity>
+			
+			<!-- Assets -->
+            <a-assets>
+				<a-asset-item id="Empty" src="./assets/Empty.gltf"></a-asset-item>
+				<a-asset-item id="Fusili" src="./assets/Fusili.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.001" src="./assets/Fusili.001.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.002" src="./assets/Fusili.002.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.003" src="./assets/Fusili.003.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.004" src="./assets/Fusili.004.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.005" src="./assets/Fusili.005.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.006" src="./assets/Fusili.006.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.007" src="./assets/Fusili.007.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.008" src="./assets/Fusili.008.gltf"></a-asset-item>
+				<a-asset-item id="Fusili.009" src="./assets/Fusili.009.gltf"></a-asset-item>
+				<a-asset-item id="Muschel" src="./assets/Muschel.gltf"></a-asset-item>
+				<a-asset-item id="Muschel.001" src="./assets/Muschel.001.gltf"></a-asset-item>
+				<a-asset-item id="Penne" src="./assets/Penne.gltf"></a-asset-item>
+				<a-asset-item id="Penne.001" src="./assets/Penne.001.gltf"></a-asset-item>
+				<a-asset-item id="Penne.002" src="./assets/Penne.002.gltf"></a-asset-item>
+				<a-asset-item id="Penne.003" src="./assets/Penne.003.gltf"></a-asset-item>
+				<a-asset-item id="Plane" src="./assets/Plane.gltf"></a-asset-item>
+				<a-asset-item id="Plane.001" src="./assets/Plane.001.gltf"></a-asset-item>
+				<a-asset-item id="Plane.008" src="./assets/Plane.008.gltf"></a-asset-item>
+				<a-asset-item id="Plane.009" src="./assets/Plane.009.gltf"></a-asset-item>
+				<a-asset-item id="Plane.010" src="./assets/Plane.010.gltf"></a-asset-item>
+				<a-asset-item id="Plane.011" src="./assets/Plane.011.gltf"></a-asset-item>
+				<a-asset-item id="Plane.012" src="./assets/Plane.012.gltf"></a-asset-item>
+				<a-asset-item id="Plane.013" src="./assets/Plane.013.gltf"></a-asset-item>
+				<a-asset-item id="Rigatoni" src="./assets/Rigatoni.gltf"></a-asset-item>
+				<a-asset-item id="Rigatoni-wrapped" src="./assets/Rigatoni-wrapped.gltf"></a-asset-item>
+				<a-asset-item id="Rigatoni.001" src="./assets/Rigatoni.001.gltf"></a-asset-item>
+				<a-asset-item id="Rigatoni.002" src="./assets/Rigatoni.002.gltf"></a-asset-item>
+				<a-asset-item id="Rigatoni.003" src="./assets/Rigatoni.003.gltf"></a-asset-item>
+				<a-asset-item id="Rigatoni.004" src="./assets/Rigatoni.004.gltf"></a-asset-item>
+				<a-asset-item id="Rigatoni.005" src="./assets/Rigatoni.005.gltf"></a-asset-item>
+				<a-asset-item id="Text" src="./assets/Text.gltf"></a-asset-item>
+				<a-asset-item id="Torus" src="./assets/Torus.gltf"></a-asset-item>
+				<a-asset-item id="Torus.001" src="./assets/Torus.001.gltf"></a-asset-item>
+				<a-asset-item id="Torus.002" src="./assets/Torus.002.gltf"></a-asset-item>
+				<a-asset-item id="Torus.003" src="./assets/Torus.003.gltf"></a-asset-item>
+				<a-asset-item id="Torus.004" src="./assets/Torus.004.gltf"></a-asset-item>
+				<a-asset-item id="Torus.005" src="./assets/Torus.005.gltf"></a-asset-item>
+                <img id="sky"                 src="./resources/sky.jpg">
+                <img id="icon-play"           src="./resources/play.png">
+                <img id="icon-pause"          src="./resources/pause.png">
+                <img id="icon-play-skip-back" src="./resources/play-skip-back.png">
+                <img id="icon-mute"           src="./resources/mute.png">
+                <img id="icon-volume-low"     src="./resources/volume-low.png">
+                <img id="icon-volume-high"    src="./resources/volume-high.png">
+            </a-assets>
+
+            <!-- Entities -->
+            
+			<a-entity id="#Empty"  scale="1 1 1" position="-0.03999999910593033 0.0 -0.0" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili" gltf-model="#Fusili" scale="1 1 1" position="-0.73675137758255 1.1529228687286377 -0.9947789907455444" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.001" gltf-model="#Fusili.001" scale="1 1 1" position="0.9343393445014954 3.364553213119507 -1.7004081010818481" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.002" gltf-model="#Fusili.002" scale="1 1 1" position="-0.15216326713562012 1.4831939935684204 -2.2458243370056152" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.003" gltf-model="#Fusili.003" scale="1 1 1" position="-0.2559041678905487 0.680859386920929 -3.3162975311279297" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.004" gltf-model="#Fusili.004" scale="1 1 1" position="0.32597532868385315 0.5720468759536743 2.2120678424835205" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.005" gltf-model="#Fusili.005" scale="1 1 1" position="0.9343392252922058 1.7764334678649902 -1.7004081010818481" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.006" gltf-model="#Fusili.006" scale="1 1 1" position="-1.4196351766586304 0.4277108311653137 -3.3258533477783203" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.007" gltf-model="#Fusili.007" scale="1 1 1" position="-0.09706934541463852 1.1191918849945068 -3.9931037425994873" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.008" gltf-model="#Fusili.008" scale="1 1 1" position="-1.96384596824646 0.21616031229496002 -5.5146260261535645" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Fusili.009" gltf-model="#Fusili.009" scale="1 1 1" position="-1.3934587240219116 4.0511860847473145 -5.21490478515625" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Muschel" gltf-model="#Muschel" scale="1 1 1" position="1.6200487613677979 1.6808571815490723 -2.5551722049713135" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Muschel.001" gltf-model="#Muschel.001" scale="1 1 1" position="1.6960973739624023 1.4007500410079956 -5.5685224533081055" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Penne" gltf-model="#Penne" scale="1 1 1" position="0.9264405965805054 1.7951347827911377 -0.48966360092163086" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Penne.001" gltf-model="#Penne.001" scale="1 1 1" position="1.7061246633529663 0.22477437555789948 -0.674006998538971" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Penne.002" gltf-model="#Penne.002" scale="1 1 1" position="0.5428734421730042 4.371481895446777 -3.2923355102539062" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Penne.003" gltf-model="#Penne.003" scale="1 1 1" position="0.4999396800994873 3.473449230194092 -3.103600263595581" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane" gltf-model="#Plane" scale="1 1 1" position="1.3124879598617554 -0.11833968758583069 1.235405683517456" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane.001" gltf-model="#Plane.001" scale="1 1 1" position="1.9575222730636597 0.6588838696479797 1.2769027948379517" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane.008" gltf-model="#Plane.008" scale="1 1 1" position="-0.43693625926971436 3.3119969367980957 -0.9622902870178223" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane.009" gltf-model="#Plane.009" scale="1 1 1" position="1.6544296741485596 0.21533499658107758 -3.5797536373138428" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane.010" gltf-model="#Plane.010" scale="1 1 1" position="1.837471842765808 1.1506977081298828 -7.174140930175781" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane.011" gltf-model="#Plane.011" scale="1 1 1" position="0.5951710939407349 0.6525430083274841 -8.76246452331543" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane.012" gltf-model="#Plane.012" scale="1 1 1" position="0.28103625774383545 1.2352465391159058 -6.553753852844238" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Plane.013" gltf-model="#Plane.013" scale="1 1 1" position="0.7542157173156738 1.0432875156402588 -5.344856262207031" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Rigatoni" gltf-model="#Rigatoni" scale="1 1 1" position="-1.574326992034912 2.3347666263580322 -0.4865260124206543" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Rigatoni-wrapped" gltf-model="#Rigatoni-wrapped" scale="1 1 1" position="-1.1931214332580566 0.5999999642372131 0.1106833815574646" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Rigatoni.001" gltf-model="#Rigatoni.001" scale="1 1 1" position="0.7685896754264832 0.06474915146827698 1.111694574356079" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Rigatoni.002" gltf-model="#Rigatoni.002" scale="1 1 1" position="-1.7606093883514404 0.04840617626905441 -1.2398475408554077" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Rigatoni.003" gltf-model="#Rigatoni.003" scale="1 1 1" position="-0.5762711763381958 0.6348724961280823 1.0880974531173706" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Rigatoni.004" gltf-model="#Rigatoni.004" scale="1 1 1" position="-2.4352455139160156 0.6348724961280823 -6.849745750427246" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Rigatoni.005" gltf-model="#Rigatoni.005" scale="1 1 1" position="-4.101863861083984 0.6348724961280823 -4.650218963623047" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Text" gltf-model="#Text" scale="1 1 1" position="-0.20443826913833618 3.4434354305267334 -12.019744873046875" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Torus" gltf-model="#Torus" scale="1 1 1" position="-1.1707395315170288 2.023815155029297 -2.796515941619873" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Torus.001" gltf-model="#Torus.001" scale="1 1 1" position="-1.2772270441055298 2.958287239074707 -2.9550836086273193" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Torus.002" gltf-model="#Torus.002" scale="1 1 1" position="-0.8301612138748169 1.7938027381896973 -2.615095853805542" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Torus.003" gltf-model="#Torus.003" scale="1 1 1" position="-0.6902834177017212 2.531376838684082 -2.331191062927246" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Torus.004" gltf-model="#Torus.004" scale="1 1 1" position="-0.617508590221405 3.3117504119873047 -3.1826350688934326" visible="true" shadow="cast: true" ></a-entity>
+			<a-entity id="#Torus.005" gltf-model="#Torus.005" scale="1 1 1" position="1.0076624155044556 0.7201130390167236 -2.16485333442688" visible="true" shadow="cast: true" ></a-entity>
+
+            <!-- Camera -->
+            <a-entity id="player" 
+                position="0 -0.2 0" 
+                movement-controls="speed: 0.10000000149011612;">
+                <a-entity id="camera" 
+                    camera="near: 0.001" 
+                    position="0 1.7000000476837158 0" 
+                    look-controls="pointerLockEnabled: true">
+                        <a-entity id="cursor" cursor="fuse: false;" animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 50; from: 	0.1 0.1 0.1; to: 1 1 1"
+                            position="0 0 -0.1"
+                            geometry="primitive: circle; radius: 0.001;"
+                            material="color: #CCC; shader: flat;"
+                            >
+                        </a-entity>
+                </a-entity>
+                    <a-entity id="leftHand" oculus-touch-controls="hand: left" vive-controls="hand: left"></a-entity>
+					<a-entity id="rightHand" laser-controls oculus-touch-controls="hand: right" vive-controls="hand: right" ></a-entity>
+            </a-entity>
+
+            <!-- Lights -->
+            
+			<a-entity position="4.076245307922363 5.903861999511719 -1.0054539442062378" light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="-5.355984210968018 7.152728080749512 1.7145230770111084" light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="4.076245307922363 5.903861999511719 -1.0054539442062378" light="castShadow:true; color:#ffffff; distance:40.0; type:point; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+			<a-entity position="4.062815189361572 10.68028450012207 0.038226962089538574" light="castShadow:true; color:#ffffff; distance:40.0; type:directional; intensity:1.0; shadowBias: -0.001; shadowCameraFar: 501.02; shadowCameraBottom: 12; shadowCameraFov: 101.79; shadowCameraNear: 0; shadowCameraTop: -5; shadowCameraRight: 10; shadowCameraLeft: -10; shadowRadius: 2;"></a-entity>
+
+            <!-- Sky -->
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+    </body>
+</html>
+<!-- Generated automatically by AFRAME Exporter for Blender - https://silverslade.itch.io/a-frame-blender-exporter -->
+<!-- MIT License: https://github.com/silverslade/aframe_blender_exporter/blob/master/LICENSE -->
