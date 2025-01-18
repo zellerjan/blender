@@ -12,8 +12,9 @@
 				"b_interactive":1,
 				"b_settings":0,
 				"b_renderer":0,
-				"b_player":1,
-				"export_path":"/Users/fazlifazliu/Downloads/"
+				"b_player":0,
+				"export_path":"/Users/fazlifazliu/Downloads/",
+				"s_project_name":"Pastaland V2"
 			},
 			"name":"Scene",
 			"nodes":[
