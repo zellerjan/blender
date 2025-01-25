@@ -1,2 +1,2 @@
-# Pastaland V1
+# Pastaland 
 Link to experience: https://zellerjan.github.io/blender/
