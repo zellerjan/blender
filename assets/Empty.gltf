@@ -9,13 +9,11 @@
 			"extras":{
 				"s_output":"exporting...",
 				"b_export":1,
-				"b_interactive":0,
+				"b_interactive":1,
 				"b_settings":0,
 				"b_renderer":0,
-				"b_player":0,
-				"export_path":"/Users/fazlifazliu/Downloads/",
-				"s_project_name":"Pastaland V3",
-				"b_cast_shadows":1
+				"b_player":1,
+				"export_path":"/Users/fazlifazliu/Downloads/"
 			},
 			"name":"Scene",
 			"nodes":[
